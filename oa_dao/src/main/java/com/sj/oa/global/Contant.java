@@ -31,5 +31,22 @@ public class Contant {
 
     //报销单状态
     public static final String CLAIMVOUCHER_CREATED="新创建";
+    public static final String CLAIMVOUCHER_SUBMIT="已提交";
+    public static final String CLAIMVOUCHER_APPROVED="已审核";
+    public static final String CLAIMVOUCHER_BACK="已打回";
+    public static final String CLAIMVOUCHER_TERMINATED="已终止";
+    public static final String CLAIMVOUCHER_RECHECK="待复审";
+    public static final String CLAIMVOUCHER_PAID="已打款";
 
+    //审核额度
+    public static final double LIMIT_CHECK=5000.0;
+
+    //处理方式
+    public static final String DEAL_CREATE="创建";
+    public static final String DEAL_SUBMIT="提交";
+    public static final String DEAL_UPDATE="修改";
+    public static final String DEAL_BACK="打回";
+    public static final String DEAL_REJECT="拒绝";
+    public static final String DEAL_PASS="通过";
+    public static final String DEAL_PAID="打款";
 }
