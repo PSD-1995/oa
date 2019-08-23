@@ -6,6 +6,7 @@ public class Employee {
     private String name;
     private String departmentSn;
     private String post;
+    private Department department;
 
     public String getSn() {
         return sn;
@@ -45,5 +46,13 @@ public class Employee {
 
     public void setPost(String post) {
         this.post = post;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

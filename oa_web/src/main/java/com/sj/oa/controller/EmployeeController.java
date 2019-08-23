@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
 
-@Controller("departmentController")
-@RequestMapping("/department")
-public class DepartmentController {
+@Controller("employeeController")
+@RequestMapping("/employee")
+public class EmployeeController {
 
     @Autowired
     private DepartmentBiz departmentBiz;
@@ -18,30 +18,30 @@ public class DepartmentController {
     @RequestMapping("/list")
     public String list(Map<String,Object> map){
         map.put("list",departmentBiz.getDepartments());
-        return "department_list";
+        return "employee_list";
     }
 
     @RequestMapping("/to_add")
     public String toAdd(Map<String,Object> map){
-        map.put("department",new Department());
-        return "department_add";
+        map.put("employee",new Department());
+        return "employee_add";
     }
 
     @RequestMapping("/add")
-    public String list(Department department){
-        departmentBiz.addDepartment(department);
+    public String list(Department employee){
+        departmentBiz.addDepartment(employee);
         return "redirect:list";
     }
 
     @RequestMapping(value = "/to_update",params = "sn")
     public String toUpdate(String sn,Map<String,Object> map){
-        map.put("department",departmentBiz.getDepartment(sn));
-        return "department_update";
+        map.put("employee",departmentBiz.getDepartment(sn));
+        return "employee_update";
     }
 
     @RequestMapping("/update")
-    public String update(Department department){
-        departmentBiz.editDepartment(department);
+    public String update(Department employee){
+        departmentBiz.editDepartment(employee);
         return "redirect:list";
     }
 
