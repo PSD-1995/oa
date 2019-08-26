@@ -28,7 +28,7 @@
     </delete>
 
     <select id="select" parameterType="String" resultMap="employee">
-        select e.*,d.sn dsn,d.name dname from employee e left join department d on d.sn=e.department_sn where sn=#{sn}
+        select e.*,d.sn dsn,d.name dname from employee e left join department d on d.sn=e.department_sn where e.sn=#{sn}
     </select>
 
     <select id="selectAll" resultMap="employee">
