@@ -1,5 +1,7 @@
 package com.sj.oa.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class ClaimVoucher {
@@ -9,6 +11,7 @@ public class ClaimVoucher {
 
     private String createSn;
 
+    @DateTimeFormat(pattern = "yyy-MM-dd hh:mm")
     private Date createTime;
 
     private String nextDealSn;
@@ -16,6 +19,10 @@ public class ClaimVoucher {
     private Double totalAmount;
 
     private String status;
+
+    private Employee creater;
+
+    private Employee dealer;
 
     public int getId() {
         return id;
@@ -71,5 +78,21 @@ public class ClaimVoucher {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Employee getCreater() {
+        return creater;
+    }
+
+    public void setCreater(Employee creater) {
+        this.creater = creater;
+    }
+
+    public Employee getDealer() {
+        return dealer;
+    }
+
+    public void setDealer(Employee dealer) {
+        this.dealer = dealer;
     }
 }

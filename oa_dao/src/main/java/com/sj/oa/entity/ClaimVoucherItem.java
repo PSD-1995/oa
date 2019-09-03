@@ -1,10 +1,15 @@
 package com.sj.oa.entity;
 
 public class ClaimVoucherItem {
+
     private int id;
+
     private int claimVoucherId;
+
     private String item;
+
     private double amount;
+
     private String comment;
 
     public int getId() {

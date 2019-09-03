@@ -1,15 +1,35 @@
 package com.sj.oa.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class DealRecord {
+
     private int id;
+
     private int claimVoucherId;
+
     private String dealSn;
+
+    @DateTimeFormat(pattern = "yyy-MM-dd hh:mm")
     private Date dealTime;
+
     private String dealWay;
+
     private String dealResult;
+
     private String comment;
+
+    private Employee dealer;
+
+    public Employee getDealer() {
+        return dealer;
+    }
+
+    public void setDealer(Employee dealer) {
+        this.dealer = dealer;
+    }
 
     public int getId() {
         return id;

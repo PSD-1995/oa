@@ -20,7 +20,7 @@ public class Contant {
     }
 
     //费用类型
-    public List<String> getItems(){
+    public static List<String> getItems(){
         List<String> list = new ArrayList<String>();
         list.add("交通");
         list.add("餐饮");
