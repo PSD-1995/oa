@@ -26,6 +26,7 @@ public class ClaimVoucherController {
         map.put("info",new ClaimVoucherInfo());
         return "claim_voucher_add";
     }
+
     @RequestMapping("/add")
     public String add(HttpSession session,ClaimVoucherInfo info){
         Employee employee = (Employee) session.getAttribute("employee");
@@ -33,6 +34,7 @@ public class ClaimVoucherController {
         claimVoucherBiz.save(info.getClaimVoucher(),info.getItems());
         return "redirect:deal";
     }
+
     @RequestMapping("/detail")
     public String detail(Map<String ,Object> map,int id){
         map.put("claimVoucher",claimVoucherBiz.get(id));
@@ -65,6 +67,7 @@ public class ClaimVoucherController {
         map.put("info",info);
         return "claim_voucher_update";
     }
+
     @RequestMapping("/update")
     public String update(HttpSession session,ClaimVoucherInfo info){
         Employee employee = (Employee) session.getAttribute("employee");
